@@ -112,7 +112,7 @@ class LogCollection extends Collection
             $currentPage
         );
 
-        return $paginator->setPath($request->url());
+        return $paginator->setPath(route($request->url()));
     }
 
     /**
