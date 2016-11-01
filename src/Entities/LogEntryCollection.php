@@ -52,7 +52,7 @@ class LogEntryCollection extends Collection
             $page
         );
 
-        return $paginator->setPath($request->url());
+        return $paginator->setPath(route($request->url(), []));
     }
 
     /**
