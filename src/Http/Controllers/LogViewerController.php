@@ -161,7 +161,7 @@ class LogViewerController extends Controller
         $items  = array_slice($data, $offset, $this->perPage, true);
         $rows   = new LengthAwarePaginator($items, count($data), $this->perPage, $page);
 
-        $rows->setPath($request->url());
+        $rows->setPath($request->fullUrl());
 
         return $rows;
     }
